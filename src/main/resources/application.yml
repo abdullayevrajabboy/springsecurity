@@ -1,0 +1,37 @@
+server:
+  port: 1010
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 123
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 1057743499088-up1motjqo647pjg932jo7bkbuu4olvkm.apps.googleusercontent.com
+            clientSecret: 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
+  main:
+      allow-circular-references: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 25
+    username: 7497e3fc48dbac
+    password: 0cb641746c58eb
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
